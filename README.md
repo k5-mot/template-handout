@@ -53,7 +53,7 @@ git push origin v0.0.0
 
 ## License
 
-Copyright (c) 2021 k5-mot All Rights Reserved.
+Copyright (c) 2021-2022 k5-mot All Rights Reserved.
 
 "k5-mot/handout-template" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
