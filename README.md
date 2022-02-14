@@ -1,6 +1,6 @@
 # Handout Template
 
-Template of handout by LaTeX.
+Template of Handout by LaTeX.
 
 
 ## 🏯 ビルド / Build
@@ -51,7 +51,7 @@ git push origin v0.0.0
 ```
 
 
-## License
+## 🍋 License / ライセンス
 
 Copyright (c) 2021-2022 k5-mot All Rights Reserved.
 
