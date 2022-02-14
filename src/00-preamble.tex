@@ -9,6 +9,7 @@
 \usepackage{multicol}
 \usepackage{titlesec}
 \usepackage{listings,style/jlisting}
+\usepackage{url}
 %
 %% Package Settings ---------------------------
 \setlength{\textwidth}{\fullwidth}
@@ -71,18 +72,38 @@
 \renewcommand{\listtablename}{表目次}
 \renewcommand{\lstlistlistingname}{コード目次}
 %
-%% \maketitleの余白を調整
+%% \maketitleの余白を調整 ver 1.0
+% \makeatletter
+% \renewcommand{\@maketitle}{\newpage
+% % \null
+% % \vskip 2em
+% \begin{center}
+% {\LARGE \@title \par} \vskip 1.5em {\large \lineskip .5em
+% \begin{tabular}[t]{c}\@author
+% \end{tabular}\par}
+% \vskip 1em {\large \@date} \end{center}
+% \par
+% \vskip 1.5em}
+% \makeatother
+%
+%% \maketitleの余白を調整 ver 2.0
 \makeatletter
-\renewcommand{\@maketitle}{\newpage
-% \null
-% \vskip 2em
+\def\subject#1{\def\@subject{#1}}
+\def\id#1{\def\@id{#1}}
+\def\master#1{\def\@master{#1}}
+\def\department#1{\def\@department{#1}}
+\def\@maketitle{
 \begin{center}
-{\LARGE \@title \par} \vskip 1.5em {\large \lineskip .5em
-\begin{tabular}[t]{c}\@author
-\end{tabular}\par}
-\vskip 1em {\large \@date} \end{center}
-\par
-\vskip 1.5em}
+{\Large \@subject \par} %修士論文と記載される部分
+%\vspace{10mm}
+{\huge\bf \@title \par}% 論文のタイトル部分
+\vspace{5mm}
+{\large \@department　\@master \par} % 所属部分
+{\large \@id　\@author\par} % 学籍番号部分
+\vspace{5mm}
+\end{center}
+%\par\vskip 1.5em
+}
 \makeatother
 %
 % 折り返し
